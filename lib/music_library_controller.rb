@@ -51,10 +51,12 @@ class MusicLibraryController
     def list_songs_by_artist
       puts "Please enter the name of an artist:"
       input = gets.chomp
-      artist_found = Artist.all.detect do |a|
-        a.name == input
+      Artist.all.detect do |a|
+        if a.name == input
+          puts a.songs
+        else
+        end
       end
-      artist_found? ? puts artist_found.songs : nil
     end
 
 
