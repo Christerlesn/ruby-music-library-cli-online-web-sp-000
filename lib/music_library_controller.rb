@@ -87,8 +87,8 @@ class MusicLibraryController
         song.name
       end
 
-      songs_sorted_by_name.each.with_index(1) do |song,index|
-        if input = index
+      songs_sorted_by_name.detect.with_index(1) do |song,index|
+        if input == index
           puts "Playing #{song.name} by #{song.artist.name}"
         end
       end
