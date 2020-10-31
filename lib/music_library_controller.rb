@@ -53,7 +53,6 @@ class MusicLibraryController
       input = gets.chomp
       artist_info = Artist.find_by_name(input)
       artist_info.songs
-      end
     end
 
 
